@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "雅迪"; ObjectID = "0Xc-7G-V0D"; */
+"0Xc-7G-V0D.text" = "雅迪";
+
+/* Class = "UILabel"; text = "型号"; ObjectID = "2VG-rK-1uU"; */
+"2VG-rK-1uU.text" = "型号";
+
+/* Class = "UITableViewSection"; headerTitle = "选择照片"; ObjectID = "4TT-Ua-3gL"; */
+"4TT-Ua-3gL.headerTitle" = "选择照片";
+
+/* Class = "UILabel"; text = "品牌"; ObjectID = "8Xg-UG-rzv"; */
+"8Xg-UG-rzv.text" = "品牌";
+
+/* Class = "UINavigationItem"; title = "车库"; ObjectID = "8oh-xT-F4Q"; */
+"8oh-xT-F4Q.title" = "车库";
+
+/* Class = "UIButton"; normalTitle = "修改"; ObjectID = "8wf-ID-2Dj"; */
+"8wf-ID-2Dj.normalTitle" = "修改";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "FMa-SF-dX2"; */
+"FMa-SF-dX2.text" = "1";
+
+/* Class = "UITableViewSection"; headerTitle = "备注"; ObjectID = "IIa-NH-sTG"; */
+"IIa-NH-sTG.headerTitle" = "备注";
+
+/* Class = "UINavigationItem"; title = "New"; ObjectID = "JeJ-mS-Dmc"; */
+"JeJ-mS-Dmc.title" = "New";
+
+/* Class = "UILabel"; text = "型号："; ObjectID = "LNw-QE-LxY"; */
+"LNw-QE-LxY.text" = "型号：";
+
+/* Class = "UILabel"; text = "品牌："; ObjectID = "NxA-2F-g4e"; */
+"NxA-2F-g4e.text" = "品牌：";
+
+/* Class = "UITableViewSection"; headerTitle = "规格"; ObjectID = "TI0-T8-EwQ"; */
+"TI0-T8-EwQ.headerTitle" = "规格";
+
+/* Class = "UITextField"; placeholder = "..."; ObjectID = "Woi-Es-2aw"; */
+"Woi-Es-2aw.placeholder" = "...";
+
+/* Class = "UILabel"; text = "战警4代"; ObjectID = "aOO-ix-5nu"; */
+"aOO-ix-5nu.text" = "战警4代";
+
+/* Class = "UILabel"; text = "数量："; ObjectID = "d7t-OP-fPc"; */
+"d7t-OP-fPc.text" = "数量：";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "dNg-ik-Kb9"; */
+"dNg-ik-Kb9.title" = " ";
+
+/* Class = "UILabel"; text = "数量"; ObjectID = "fVD-Ri-Qmk"; */
+"fVD-Ri-Qmk.text" = "数量";
+
+/* Class = "UILabel"; text = "型号："; ObjectID = "kxm-Oj-tV8"; */
+"kxm-Oj-tV8.text" = "型号：";
+
+/* Class = "UILabel"; text = "品牌："; ObjectID = "pwl-yF-7vd"; */
+"pwl-yF-7vd.text" = "品牌：";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "qZR-8R-Ltr"; */
+"qZR-8R-Ltr.text" = "3";
+
+/* Class = "UILabel"; text = "库存："; ObjectID = "sgF-8T-ZIr"; */
+"sgF-8T-ZIr.text" = "库存：";
+
+/* Class = "UIButton"; normalTitle = "删除"; ObjectID = "wAu-I1-Can"; */
+"wAu-I1-Can.normalTitle" = "删除";

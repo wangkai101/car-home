@@ -114,14 +114,16 @@ extension MainViewController {
     //删除
     @objc private func deleteRow() {
         //cars.remove(at: tableView.indexPathForSelectedRow!.row)
+        
         let indexPath = tableView.indexPathForSelectedRow!
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
+        
         context.delete(self.fc.object(at: indexPath))
         appDelegate.saveContext()
-       
+
     }
     
     //修改
@@ -134,6 +136,7 @@ extension MainViewController {
         dict.number = Int16(number)
         dict.brand = brand
         dict.name = name
+        
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.saveContext()
@@ -149,7 +152,7 @@ extension MainViewController {
         let nameResults = cars.filter({ (Car) -> Bool in
             return (Car.name?.localizedCaseInsensitiveContains(text))!
         })
-        
+
         let numberResult = cars.filter({ (Car) -> Bool in
             return (String(Car.number).localizedCaseInsensitiveContains(text))
         })

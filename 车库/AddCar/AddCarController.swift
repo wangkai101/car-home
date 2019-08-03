@@ -16,9 +16,6 @@ class AddCarController: UITableViewController {
     
     
     
-    
-
-
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var nameText: UITextField!
@@ -29,7 +26,6 @@ class AddCarController: UITableViewController {
         super.viewDidLoad()
 
        // loadJson()
-        
         
        
     }
@@ -59,7 +55,8 @@ extension AddCarController {
     }
     
     //弹出照片选择
-    private func selectPhoto() {
+    private func selectPhoto(indexpath : IndexPath) {
+        
         //创建一个弹出表单
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -78,6 +75,10 @@ extension AddCarController {
         actionSheet.addAction(photoAction)
         actionSheet.addAction(takePhotoAction)
         actionSheet.addAction(cancelAction)
+        
+        //适配ipad，actionSheet类型会导致闪退
+        actionSheet.popoverPresentationController?.sourceView = self.view
+        actionSheet.popoverPresentationController?.sourceRect = tableView.cellForRow(at: indexpath)!.frame
         
         present(actionSheet, animated: true, completion: nil)
     }
@@ -111,15 +112,10 @@ extension AddCarController : UIImagePickerControllerDelegate, UINavigationContro
         //获取选中的照片
         let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) ?? UIImage(named: "compose_toolbar_picture")!
         
-//        //展示照片
+        //展示照片
         bgImageView.image = image
 
-        
-//
-//        //将数组赋值给collectionView，让其展示数据
-//        picPickerView.images = images
-//
-//        //退出选中照片控制器
+        //退出选中照片控制器
         dismiss(animated: true, completion: nil)
     }
 }
@@ -149,8 +145,11 @@ extension AddCarController : UIPickerViewDelegate, UIPickerViewDataSource {
 extension AddCarController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            selectPhoto()
+            //弹出照片选择器
+            selectPhoto(indexpath: indexPath)
         }
+        
+        
     }
     
 

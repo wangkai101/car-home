@@ -29,23 +29,23 @@ class DetailController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-       // hideBtn(isSearchActive: isSearchActive)
+        hideBtn(isSearchActive: isSearchActive)
     }
 
     override func viewDidAppear(_ animated: Bool) {
   
     }
     
-//    private func hideBtn(isSearchActive : Bool) {
-//        if isSearchActive {
-//            delBtn.isHidden = true
-//            saveBtn.isHidden = true
-//            nameTextFiled.isEnabled = false
-//            brandTextFiled.isEnabled = false
-//            numberTextFiled.isEnabled = false
-//
-//        }
-//    }
+    private func hideBtn(isSearchActive : Bool) {
+        if isSearchActive {
+            delBtn.isHidden = true
+            saveBtn.isHidden = true
+            nameTextFiled.isEnabled = false
+            brandTextFiled.isEnabled = false
+            numberTextFiled.isEnabled = false
+
+        }
+    }
 }
     //MARK:- 设置ui
     extension DetailController {
