@@ -110,7 +110,7 @@ extension AddCarController : UIImagePickerControllerDelegate, UINavigationContro
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //print(info)
         //获取选中的照片
-        let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) ?? UIImage(named: "compose_toolbar_picture")!
+        let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
         
         //展示照片
         bgImageView.image = image

@@ -64,7 +64,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-T9-Tnx">
                                                     <rect key="frame" x="462" y="383" width="63" height="17"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="库存：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgF-8T-ZIr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgF-8T-ZIr">
                                                             <rect key="frame" x="0.0" y="0.0" width="43" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -146,7 +146,7 @@
                         <sections>
                             <tableViewSection headerTitle="选择照片" id="4TT-Ua-3gL">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="SKN-ym-AeG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="400" id="SKN-ym-AeG">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKN-ym-AeG" id="syW-zy-Pee">
@@ -214,29 +214,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-42" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-HT-DfG">
-                                                    <rect key="frame" x="15" y="-58" width="345" height="216"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="品牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xg-UG-rzv">
-                                                            <rect key="frame" x="0.0" y="98" width="35" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s7-i0-JGt">
-                                                            <rect key="frame" x="-7" y="0.0" width="352" height="216"/>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="pU6-Xk-Axr" id="XhK-I0-xJj"/>
-                                                                <outlet property="delegate" destination="pU6-Xk-Axr" id="XGj-Ac-ria"/>
-                                                            </connections>
-                                                        </pickerView>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="品牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xg-UG-rzv">
+                                                    <rect key="frame" x="15" y="40" width="35" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s7-i0-JGt">
+                                                    <rect key="frame" x="94" y="-58" width="187.5" height="216"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="pU6-Xk-Axr" id="XhK-I0-xJj"/>
+                                                        <outlet property="delegate" destination="pU6-Xk-Axr" id="XGj-Ac-ria"/>
+                                                    </connections>
+                                                </pickerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Jau-HT-DfG" secondAttribute="trailing" constant="15" id="Xxn-7a-KUE"/>
-                                                <constraint firstItem="Jau-HT-DfG" firstAttribute="centerY" secondItem="boL-Lv-xXi" secondAttribute="centerY" id="ek3-wn-u6e"/>
-                                                <constraint firstItem="Jau-HT-DfG" firstAttribute="leading" secondItem="boL-Lv-xXi" secondAttribute="leading" constant="15" id="y2k-NG-63h"/>
+                                                <constraint firstItem="9s7-i0-JGt" firstAttribute="centerX" secondItem="boL-Lv-xXi" secondAttribute="centerX" id="4we-EZ-xx9"/>
+                                                <constraint firstItem="8Xg-UG-rzv" firstAttribute="leading" secondItem="boL-Lv-xXi" secondAttribute="leading" constant="15" id="5Nn-ic-DNS"/>
+                                                <constraint firstItem="8Xg-UG-rzv" firstAttribute="centerY" secondItem="boL-Lv-xXi" secondAttribute="centerY" id="Cf2-uw-2Ar"/>
+                                                <constraint firstItem="9s7-i0-JGt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Xg-UG-rzv" secondAttribute="trailing" constant="8" symbolic="YES" id="HHU-u8-Sxd"/>
+                                                <constraint firstItem="9s7-i0-JGt" firstAttribute="centerY" secondItem="boL-Lv-xXi" secondAttribute="centerY" id="QC1-ey-5dj"/>
+                                                <constraint firstItem="9s7-i0-JGt" firstAttribute="width" secondItem="boL-Lv-xXi" secondAttribute="width" multiplier="1:2" id="W1R-7u-RBp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -330,7 +328,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="GDz-4c-bIJ">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="GDz-4c-bIJ">
                             <rect key="frame" x="0.0" y="676" width="375" height="377"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -569,6 +567,6 @@
     </scenes>
     <resources>
         <image name="bd_logo1" width="540" height="258"/>
-        <image name="compose_toolbar_picture" width="24" height="24"/>
+        <image name="compose_toolbar_picture" width="100" height="100"/>
     </resources>
 </document>

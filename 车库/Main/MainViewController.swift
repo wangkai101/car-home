@@ -145,19 +145,9 @@ extension MainViewController {
     //按条件筛选
     private func searchFilter(text : String) {
         
-        let brandResults = cars.filter { (Car) -> Bool in
-            return (Car.brand?.localizedCaseInsensitiveContains(text))!
-        }
-        
-        let nameResults = cars.filter({ (Car) -> Bool in
+        searchResults = cars.filter({ (Car) -> Bool in
             return (Car.name?.localizedCaseInsensitiveContains(text))!
         })
-
-        let numberResult = cars.filter({ (Car) -> Bool in
-            return (String(Car.number).localizedCaseInsensitiveContains(text))
-        })
-        
-        searchResults = brandResults + nameResults + numberResult
     }
     
     //取数据
