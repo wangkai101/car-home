@@ -97,6 +97,8 @@ extension MainViewController {
         let modelBrand = note.userInfo!["brand"] as! String
         let modelName = note.userInfo!["name"] as! String
         let image = note.userInfo!["image"] as! UIImage
+        let remarks = note.userInfo!["remarks"] as! String
+        
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         car = CarsMO(context: appDelegate.persistentContainer.viewContext)
@@ -104,6 +106,7 @@ extension MainViewController {
         car.image = image.jpegData(compressionQuality: 0.7)
         car.name = modelName
         car.number = Int16(modelNumber)
+        car.remarks = remarks
         
         print("正在保存")
         appDelegate.saveContext()
@@ -131,11 +134,15 @@ extension MainViewController {
         let number = note.userInfo!["number"] as! Int
         let brand = note.userInfo!["brand"] as! String
         let name = note.userInfo!["name"] as! String
+        let remakes = note.userInfo!["remakes"] as! String
+        
+        
       
         let dict = cars[tableView.indexPathForSelectedRow!.row]
         dict.number = Int16(number)
         dict.brand = brand
         dict.name = name
+        dict.remarks = remakes
         
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -145,9 +152,18 @@ extension MainViewController {
     //按条件筛选
     private func searchFilter(text : String) {
         
-        searchResults = cars.filter({ (Car) -> Bool in
+        let searchNames = cars.filter({ (Car) -> Bool in
             return (Car.name?.localizedCaseInsensitiveContains(text))!
         })
+        let searchBrands = cars.filter({ (Car) -> Bool in
+            return (Car.brand?.localizedCaseInsensitiveContains(text))!
+        })
+        let searchNumbers = cars.filter({ (Car) -> Bool in
+            return (String(Car.number).localizedCaseInsensitiveContains(text))
+        })
+        
+        searchResults = searchNames + searchBrands + searchNumbers
+        
     }
     
     //取数据

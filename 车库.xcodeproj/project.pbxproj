@@ -21,10 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8357011622F5C6270096F791 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		8357011722F5C6270096F791 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		8357011822F5C92B0096F791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		8357011922F5C92B0096F791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		83A65A3722EDD5EA00CCB6C9 /* 车库.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "车库.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A65A3A22EDD5EA00CCB6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A65A3F22EDD5EA00CCB6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +32,8 @@
 		83A65A5C22EDF4BD00CCB6C9 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		83A65A5E22EE87CB00CCB6C9 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		83A65A6C22EEE5B600CCB6C9 /* AddCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
+		83B319BF22F934920018DE49 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		83B319C022F934920018DE49 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		83B9AD6D22F3F0950088A306 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		83D521EE22F46D04007A8D6A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,9 +164,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				"zh-Hans",
-				en,
 			);
 			mainGroup = 83A65A2E22EDD5EA00CCB6C9;
 			productRefGroup = 83A65A3822EDD5EA00CCB6C9 /* Products */;
@@ -216,8 +214,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83A65A3F22EDD5EA00CCB6C9 /* Base */,
-				8357011622F5C6270096F791 /* zh-Hans */,
-				8357011822F5C92B0096F791 /* en */,
+				83B319BF22F934920018DE49 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -226,8 +223,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83A65A4422EDD5EB00CCB6C9 /* Base */,
-				8357011722F5C6270096F791 /* zh-Hans */,
-				8357011922F5C92B0096F791 /* en */,
+				83B319C022F934920018DE49 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -361,11 +357,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3UNDL2G5D;
 				INFOPLIST_FILE = "车库/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hello.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hello.wangkai.car;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,11 +377,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3UNDL2G5D;
 				INFOPLIST_FILE = "车库/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hello.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hello.wangkai.car;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

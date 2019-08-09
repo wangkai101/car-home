@@ -20,6 +20,7 @@ class AddCarController: UITableViewController {
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var numberText: UITextField!
+    @IBOutlet weak var remarkText: UITextView!
     
     
     override func viewDidLoad() {
@@ -49,7 +50,7 @@ extension AddCarController {
     //实现保存按钮
     @IBAction func caveBtnClick(_ sender: Any) {
         
-        let userInfo = ["number": Int(numberText.text!)!, "brand": pickViewTitle, "name" : nameText.text!, "image" : bgImageView.image!] as [String : Any]
+        let userInfo = ["number": Int(numberText.text!)!, "brand": pickViewTitle, "name" : nameText.text!, "image" : bgImageView.image!, "remarks" : remarkText.text!] as [String : Any]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: modelNotification), object: nil, userInfo: userInfo)
         
     }

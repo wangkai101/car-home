@@ -23,6 +23,7 @@ class DetailController: UITableViewController {
     @IBOutlet weak var numberTextFiled: UITextField!
     @IBOutlet weak var delBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var remarksText: UITextView!
     
  
     
@@ -43,6 +44,7 @@ class DetailController: UITableViewController {
             nameTextFiled.isEnabled = false
             brandTextFiled.isEnabled = false
             numberTextFiled.isEnabled = false
+            remarksText.isEditable = false
 
         }
     }
@@ -55,6 +57,7 @@ class DetailController: UITableViewController {
             nameTextFiled.text = car?.name
             brandTextFiled.text = car?.brand 
             numberTextFiled.text = car?.number.description
+            remarksText.text = car?.remarks
             
             navigationItem.largeTitleDisplayMode = .never
             
@@ -79,7 +82,7 @@ extension DetailController {
     
     @IBAction func saveBtnClick() {
         
-        let userInfo = ["number": Int(numberTextFiled.text!)!, "brand": brandTextFiled.text!, "name" : nameTextFiled.text!] as [String : Any]
+        let userInfo = ["number": Int(numberTextFiled.text!)!, "brand": brandTextFiled.text!, "name" : nameTextFiled.text!, "remakes" : remarksText.text!] as [String : Any]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: ChangeNote), object: nil, userInfo: userInfo)
         navigationController?.popViewController(animated: true)
     }

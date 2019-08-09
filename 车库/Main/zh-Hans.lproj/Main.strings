@@ -41,6 +41,9 @@
 /* Class = "UILabel"; text = "战警4代"; ObjectID = "aOO-ix-5nu"; */
 "aOO-ix-5nu.text" = "战警4代";
 
+/* Class = "UITableViewSection"; headerTitle = "备注"; ObjectID = "aZa-ad-lvb"; */
+"aZa-ad-lvb.headerTitle" = "备注";
+
 /* Class = "UILabel"; text = "数量："; ObjectID = "d7t-OP-fPc"; */
 "d7t-OP-fPc.text" = "数量：";
 
@@ -49,6 +52,9 @@
 
 /* Class = "UILabel"; text = "数量"; ObjectID = "fVD-Ri-Qmk"; */
 "fVD-Ri-Qmk.text" = "数量";
+
+/* Class = "UITableViewSection"; headerTitle = "详情"; ObjectID = "ju8-Sr-qTl"; */
+"ju8-Sr-qTl.headerTitle" = "详情";
 
 /* Class = "UILabel"; text = "型号："; ObjectID = "kxm-Oj-tV8"; */
 "kxm-Oj-tV8.text" = "型号：";
@@ -59,8 +65,8 @@
 /* Class = "UILabel"; text = "3"; ObjectID = "qZR-8R-Ltr"; */
 "qZR-8R-Ltr.text" = "3";
 
-/* Class = "UILabel"; text = "库存："; ObjectID = "sgF-8T-ZIr"; */
-"sgF-8T-ZIr.text" = "库存：";
+/* Class = "UILabel"; text = "数量："; ObjectID = "sgF-8T-ZIr"; */
+"sgF-8T-ZIr.text" = "数量：";
 
 /* Class = "UIButton"; normalTitle = "删除"; ObjectID = "wAu-I1-Can"; */
 "wAu-I1-Can.normalTitle" = "删除";
