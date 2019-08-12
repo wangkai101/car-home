@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCarController: UITableViewController {
     var pickViewTitle = "雅迪"
@@ -25,13 +26,13 @@ class AddCarController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       // loadJson()
         
-       
+        // loadJson()
+        
+        
     }
-
-
+    
+    
 }
 
 //MARK:- 监听事件
@@ -50,9 +51,18 @@ extension AddCarController {
     //实现保存按钮
     @IBAction func caveBtnClick(_ sender: Any) {
         
-        let userInfo = ["number": Int(numberText.text!)!, "brand": pickViewTitle, "name" : nameText.text!, "image" : bgImageView.image!, "remarks" : remarkText.text!] as [String : Any]
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: modelNotification), object: nil, userInfo: userInfo)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        car = CarsMO(context: appDelegate.persistentContainer.viewContext)
+        car!.brand = pickViewTitle
+        car!.image = bgImageView.image!.jpegData(compressionQuality: 0.7)
+        car!.name = nameText.text
+        car!.number = Int16(Int(numberText.text!)!)
+        car!.remarks = remarkText.text
         
+        print("正在保存")
+        appDelegate.saveContext()
+        
+        dismiss(animated: true, completion: nil)
     }
     
     //弹出照片选择
@@ -115,7 +125,7 @@ extension AddCarController : UIImagePickerControllerDelegate, UINavigationContro
         
         //展示照片
         bgImageView.image = image
-
+        
         //退出选中照片控制器
         dismiss(animated: true, completion: nil)
     }
@@ -153,7 +163,7 @@ extension AddCarController {
         
     }
     
-
+    
 }
 
 
